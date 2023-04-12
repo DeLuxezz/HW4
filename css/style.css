@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font: 12px/1.2 "Trebuchet MS", normal;
+    color: #525252;
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(237,26,45,1) 0%, rgb(0, 0, 0) 100%);
+}
+
+.container{
+    margin: 0 auto;
+    width: 903px;
+}
+
+.header .container{
+    line-height: 0;
+}
+
+.nav{
+    border-top: 1px solid #fff;
+    background: #000;
+}
+
+.nav_list{
+    display: flex;
+    padding-left: 281px;
+    
+}
+
+.nav_list-item{
+    font-size: 11px;
+    line-height: 2.9;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav_link{
+    padding: 0 8px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+
+
+.nav_link:hover{
+    background-color: #fff;
+    color: #000;
+    transition: ease .5s;
+}
+
+.nav_inner{
+    /* display: none; */
+    /* display: inline-block; */
+    position: absolute;
+    background-color: #928564;
+    left: 0;
+    top: 33px;
+    width: 173px;
+    padding: 9px 0px 13px 0px;
+}
+
+.nav_inner-item{
+    width: 100%;
+    height: 21px;
+    /* padding: 0 35px 0 14px; */
+}
+
+.inner{
+    font-size: 12px;
+    line-height: 1.75;
+    padding-left: 14px;
+    color: #fff;
+    display: block;
+}
+
+.nav_inner-item:hover{
+    background-color: #000;
+    transition: ease .5s;
+}
+
+.nav_inner::after{
+    content: '';
+    /* display: none; */
+}
+
+.float{
+    float: left;
+}
+
+.left_column{
+    width: 265px;
+    height: 566px;
+    background-color: #ffb600;
+}
+
+.right_column{
+    padding: 19px 0 26px 16px;
+    max-width: 621px;
+}
+
+.right_column-img{
+    margin: 0;
+    padding: 0;
+    border: 10px solid #dfdfdf;
+}
+
+.right_column-content{
+    padding: 20px 0 0 19px;
+    margin: 0;
+}
+
+.title{
+    font-size: 22px;
+    color: #ed1a2d;
+    margin: 0;
+
+}
+
+.box{
+    overflow: hidden;
+}
+
+.content_nav{
+
+}
+
+.content_nav-list{
+    display: inline;
+}
+
+.content_nav-list::after{
+    content: '>';
+    color: #928564;
+}
+
+.content_nav-list:last-child::after{
+    display: none;
+}
+
+.content_nav-list_item{
+    display: inline-block;
+    color: #928564;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.current{
+    cursor: auto;
+}
+
+.text:last-child{
+    margin-bottom: 0;
+}
