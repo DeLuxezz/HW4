@@ -115,6 +115,11 @@ a{
     transition: ease .5s;
 }
 
+.nav_list-item:hover .nav_link{
+    background-color: #fff;
+    color: #000;
+}
+
 .nav_inner::before{
     content: '';
     position: absolute;
