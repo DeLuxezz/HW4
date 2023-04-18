@@ -2,10 +2,12 @@
     box-sizing: border-box;
 }
 
+html,
 body{
     font: 12px/1.2 "Trebuchet MS", normal;
     color: #525252;
     margin: 0;
+    height: 100%;
 }
 
 ul{
@@ -23,6 +25,12 @@ a{
     text-decoration: underline;
 }
 
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .header{
     padding: 0;
     margin: 0;
@@ -32,6 +40,7 @@ a{
 .container{
     margin: 0 auto;
     width: 903px;
+    flex: 1 1 auto;
 }
 
 .header .container{
@@ -75,27 +84,30 @@ a{
 
 .nav_inner{
     display: none;
-    /* display: inline-block; */
     position: absolute;
     background-color: #928564;
     left: 0;
     top: 33px;
     width: 173px;
     padding: 9px 0px 13px 0px;
+    z-index: 1;
 }
+
+.nav_list-item:hover .nav_inner{display: inline-block;}
 
 .nav_inner-item{
     width: 100%;
     height: 21px;
-    /* padding: 0 35px 0 14px; */
 }
 
 .inner{
     font-size: 12px;
     line-height: 1.75;
+    font-weight: 700;
     padding-left: 14px;
     color: #fff;
     display: block;
+    text-decoration: none;
 }
 
 .nav_inner-item:hover{
@@ -103,9 +115,12 @@ a{
     transition: ease .5s;
 }
 
-.nav_inner::after{
+.nav_inner::before{
     content: '';
-    /* display: none; */
+    position: absolute;
+    height: 3px;
+    top: -1px;
+    width: 100%;
 }
 
 .float{
@@ -146,7 +161,7 @@ a{
     display: inline-block;
     width: 100%;
     text-decoration: none;
-    padding: 8px 0;
+    padding: 8px 8px;
 }
 
 .left_link:hover{
@@ -223,10 +238,6 @@ a{
     overflow: hidden;
 }
 
-.content_nav{
-
-}
-
 .content_nav-list{
     display: inline;
     color: #928564;
@@ -260,6 +271,8 @@ a{
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, rgb(0,0,0) 0%, rgba(237,26,45,1) 100%);
+    clear: both;
+    position: relative;
 }
 
 .copyright{
